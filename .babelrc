@@ -1,0 +1,36 @@
+{
+  "presets": [
+    ["next/babel"]
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@components": "./components",
+          "@public": "./public",
+          "@config": "./config",
+          "@redux": "./redux",
+          "@utils": "./utils"
+        }
+      }
+    ],
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": "css"
+      }
+    ],
+    "inline-react-svg"
+  ],
+  "env": {
+    "test": {
+      "presets": [
+        ["@babel/preset-env", {
+          "modules": false
+        }], "next/babel"
+      ]
+    }
+  }
+}
